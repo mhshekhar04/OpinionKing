@@ -164,9 +164,8 @@ body {
   font-weight: bold;
 }
 
-/* Responsive: stack everything in one column if too narrow */
 @media (max-width: 600px) {
-  /* Container: Use full width with reduced padding */
+  /* Container: Use full width with reduced padding and border-radius */
   .container {
     width: 100%;
     padding: 20px;
@@ -174,10 +173,10 @@ body {
     border-radius: 10px;
   }
 
-  /* Heading: Adjust bottom margin and font-size if needed */
+  /* Heading: Smaller margin and font size */
   .top-heading {
     margin: 0 0 20px 0;
-    font-size: 28px; /* Optional: adjust heading size */
+    font-size: 24px;
   }
 
   /* Main Layout: Stack columns vertically */
@@ -186,73 +185,83 @@ body {
     gap: 20px;
   }
 
-  /* Order Book & Right Panel: Full width */
+  /* Left & Right Columns: Full width */
   .order-book,
   .right-panel {
     width: 100%;
   }
 
-  /* Order Boxes: Slightly reduced padding and font sizes */
+  /* Order Book adjustments */
+  .order-book {
+    gap: 20px;
+  }
+
   .orders {
-    padding: 20px;
-    border-radius: 7px;
+    padding: 15px;
+    border-radius: 8px;
   }
 
   .orders h2 {
+    font-size: 20px;
     margin: 0 0 15px 0;
-    font-size: 22px;
   }
 
   .orders li {
     padding: 15px;
-    margin-bottom: 7px;
-    border-radius: 7px;
-    font-size: 18px;
+    font-size: 16px;
+    margin-bottom: 8px;
+    border-radius: 8px;
   }
 
   .orders button {
     padding: 8px;
+    font-size: 14px;
     border-radius: 4px;
-    font-size: 16px;
   }
 
-  /* Market Price Box: Adjust padding and font size */
+  /* Right Panel adjustments */
+  .right-panel {
+    gap: 20px;
+  }
+
   .market-price-box {
     padding: 15px;
-    border-radius: 7px;
-    font-size: 22px;
+    border-radius: 8px;
+    font-size: 20px;
   }
 
-  /* Order Form: Reduce padding/gap */
+  /* Order Form adjustments */
   .order-form {
     padding: 20px;
-    border-radius: 7px;
+    border-radius: 8px;
     gap: 15px;
   }
 
   .order-form input {
-    padding: 18px;
-    font-size: 24px;
-    border-radius: 7px;
+    padding: 16px;
+    font-size: 20px;
+    border-radius: 8px;
   }
 
   .place-order-btn {
-    padding: 16px;
+    padding: 14px;
     font-size: 20px;
-    border-radius: 7px;
+    border-radius: 6px;
   }
 
-  /* Toggle Buttons: Adjust spacing and size */
+  /* Toggle Buttons adjustments */
   .toggle-group {
     gap: 10px;
     margin-bottom: 10px;
   }
 
   .toggle-button {
-    padding: 16px;
+    padding: 14px;
     font-size: 20px;
-    border-radius: 7px;
+    border-radius: 8px;
   }
 }
+
+
 
 
