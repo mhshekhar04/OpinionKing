@@ -1,0 +1,258 @@
+/* Global Styles */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #181818;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  background: #242424;
+  padding: 40px;               /* doubled from 20px */
+  border-radius: 20px;         /* doubled from 10px */
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);  /* doubled from 15px */
+  max-width: 2400px;           /* doubled from 1200px */
+}
+
+/* Heading at the top */
+.top-heading {
+  text-align: center;
+  margin: 0 0 40px 0;          /* doubled from 20px */
+}
+
+/* Main layout: 2 columns (Order Book on left, Right Panel on right) */
+.main-layout {
+  display: flex;
+  gap: 40px;                  /* doubled from 20px */
+}
+
+/* Left Column: Order Book */
+.order-book {
+  flex: 2;                    
+  display: flex;
+  flex-direction: column;     
+  gap: 40px;                  /* doubled from 20px */
+}
+
+/* Each order box (Sell Orders, Buy Orders) */
+.orders {
+  background: #333;
+  padding: 30px;              /* doubled from 15px */
+  border-radius: 10px;        /* doubled from 5px */
+}
+
+.orders h2 {
+  text-align: center;
+  margin: 0 0 20px 0;         /* doubled from 10px */
+}
+
+.orders ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.orders li {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;              /* doubled from 10px */
+  background: #444;
+  margin-bottom: 10px;        /* doubled from 5px */
+  border-radius: 10px;        /* doubled from 5px */
+}
+
+.orders button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px;              /* doubled from 5px */
+  cursor: pointer;
+  border-radius: 6px;         /* doubled from 3px */
+}
+
+.orders button:hover {
+  background: darkred;
+}
+
+/* Right Column: Market Price + Order Form */
+.right-panel {
+  flex: 1;                  
+  display: flex;
+  flex-direction: column;
+  gap: 40px;                  /* doubled from 20px */
+}
+
+/* Market Price Box */
+.market-price-box {
+  text-align: center;
+  background: #333;
+  padding: 20px;              /* doubled from 10px */
+  border-radius: 10px;        /* doubled from 5px */
+}
+
+.market-price-box h2 {
+  margin: 0;
+}
+
+.market-price-box h2 span {
+  color: #ffcc00;
+}
+
+/* Order Form */
+.order-form {
+  background: #333;
+  padding: 30px;              /* doubled from 15px */
+  border-radius: 10px;        /* doubled from 5px */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;                  /* doubled from 10px */
+}
+
+.order-form input {
+  padding: 24px;              /* doubled from 12px */
+  font-size: 32px;            /* doubled from 16px */
+  border-radius: 10px;        /* doubled from 5px */
+  border: 1px solid #555;
+  background: #333;
+  color: white;
+}
+
+.place-order-btn {
+  background: #ffcc00;
+  color: black;
+  padding: 18px;              /* doubled from 12px */
+  font-size: 24px;            /* doubled from 18px */
+  border: none;
+  border-radius: 7.5px;        /* doubled from 5px */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.place-order-btn:hover {
+  background: #e6b800;
+}
+
+/* Toggle Buttons */
+.toggle-group {
+  display: flex;
+  gap: 15px;                  /* doubled from 10px */
+  margin-bottom: 15px;        /* doubled from 10px */
+  justify-content: center;
+}
+
+.toggle-button {
+  flex: 1;
+  padding: 18px;              /* doubled from 12px */
+  font-size: 24px;            /* doubled from 16px */
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;        /* doubled from 5px */
+  background: #555;
+  color: white;
+  transition: 0.3s;
+}
+
+.toggle-button.active {
+  background: #ffcc00;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Responsive: stack everything in one column if too narrow */
+@media (max-width: 600px) {
+  /* Container: Use full width with reduced padding */
+  .container {
+    width: 100%;
+    padding: 20px;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  /* Heading: Adjust bottom margin and font-size if needed */
+  .top-heading {
+    margin: 0 0 20px 0;
+    font-size: 28px; /* Optional: adjust heading size */
+  }
+
+  /* Main Layout: Stack columns vertically */
+  .main-layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Order Book & Right Panel: Full width */
+  .order-book,
+  .right-panel {
+    width: 100%;
+  }
+
+  /* Order Boxes: Slightly reduced padding and font sizes */
+  .orders {
+    padding: 20px;
+    border-radius: 7px;
+  }
+
+  .orders h2 {
+    margin: 0 0 15px 0;
+    font-size: 22px;
+  }
+
+  .orders li {
+    padding: 15px;
+    margin-bottom: 7px;
+    border-radius: 7px;
+    font-size: 18px;
+  }
+
+  .orders button {
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  /* Market Price Box: Adjust padding and font size */
+  .market-price-box {
+    padding: 15px;
+    border-radius: 7px;
+    font-size: 22px;
+  }
+
+  /* Order Form: Reduce padding/gap */
+  .order-form {
+    padding: 20px;
+    border-radius: 7px;
+    gap: 15px;
+  }
+
+  .order-form input {
+    padding: 18px;
+    font-size: 24px;
+    border-radius: 7px;
+  }
+
+  .place-order-btn {
+    padding: 16px;
+    font-size: 20px;
+    border-radius: 7px;
+  }
+
+  /* Toggle Buttons: Adjust spacing and size */
+  .toggle-group {
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .toggle-button {
+    padding: 16px;
+    font-size: 20px;
+    border-radius: 7px;
+  }
+}
+
+
